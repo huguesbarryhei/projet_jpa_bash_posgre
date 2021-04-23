@@ -62,7 +62,7 @@ public class BatchConfiguration {
                 .build();
     }
 
-
+    /*
     @Bean
     public JpaPagingItemReader<Person> reader(EntityManagerFactory entityManagerFactory) {
         return new JpaPagingItemReaderBuilder<Person>()
