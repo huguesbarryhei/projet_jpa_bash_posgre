@@ -1,7 +1,6 @@
 package com.example.projet1.demo.listener;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
@@ -10,9 +9,8 @@ import org.springframework.stereotype.Component;
 
 
 @Component
+@Slf4j
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
-
-    private static final Logger log = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
 
     @Override
     public void afterJob(JobExecution jobExecution) {

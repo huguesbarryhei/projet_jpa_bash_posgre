@@ -2,8 +2,6 @@ package com.example.projet1.demo.processor;
 
 import com.example.projet1.demo.entity.Person;
 import com.example.projet1.demo.entity.Pharmacien;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 

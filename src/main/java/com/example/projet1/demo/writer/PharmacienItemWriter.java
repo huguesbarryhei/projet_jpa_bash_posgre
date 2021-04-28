@@ -1,9 +1,8 @@
 package com.example.projet1.demo.writer;
 
-import com.example.projet1.demo.dao.PersonRepository;
-import com.example.projet1.demo.dao.PharmacienRepository;
-import com.example.projet1.demo.entity.Person;
+import com.example.projet1.demo.repository.PharmacienRepository;
 import com.example.projet1.demo.entity.Pharmacien;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,6 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
+@Slf4j
 public class PharmacienItemWriter implements ItemWriter<Pharmacien> {
 
     @Autowired
@@ -18,7 +18,7 @@ public class PharmacienItemWriter implements ItemWriter<Pharmacien> {
 
     @Override
     public void write(List<? extends Pharmacien> items) throws Exception {
-        System.out.println(items);
+        log.info(String.valueOf(items));
         pharmacienRepository.saveAll(items);
     }
 }
